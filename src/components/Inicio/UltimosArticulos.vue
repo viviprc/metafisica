@@ -21,9 +21,8 @@
               </v-card-actions>
             </div>
 
-            <v-avatar class="ma-3" size="100" tile>
+            <v-avatar class="ma-3 ultimos-articulos__imagen" size="100" tile>
               <v-img
-                id="img1"
                 src="http://www.metafisicadechile.cl/jesus_expulsa_a_los_cambistas.png"
               ></v-img>
             </v-avatar>
@@ -48,8 +47,8 @@
               </v-card-actions>
             </div>
 
-            <v-avatar class="ma-3" size="100" tile>
-              <v-img id="img2" src="../../assets/es_tiempo_de_dios.png"></v-img>
+            <v-avatar class="ma-3 ultimos-articulos__imagen" size="100" tile>
+              <v-img src="../../assets/es_tiempo_de_dios.png"></v-img>
             </v-avatar>
           </div>
         </v-card>
@@ -74,9 +73,8 @@
               </v-card-actions>
             </div>
 
-            <v-avatar class="ma-3" size="100" tile>
+            <v-avatar class="ma-3 ultimos-articulos__imagen" size="100" tile>
               <v-img
-                id="img3"
                 src="../../../public/seis_reglas_de_conducta.jpg"
               ></v-img>
             </v-avatar>
@@ -86,7 +84,7 @@
       <v-col cols="12">
         <v-card color="indigo lighten-5">
           <div class="d-flex flex-no-wrap justify-space-between">
-            <div>
+            <div class="ultimos-articulos__llave-tonal">
               <v-card-title class="headline">
                 Llave tonal de la semana</v-card-title
               >
@@ -97,20 +95,17 @@
               <v-card-text class="pb-0"
                 >“Ave Verum Corpus” – K 618, de Mozart.</v-card-text
               >
-              <v-card-actions>
-                <div>
-                  <audio
-                    src="../../assets/audio/ave_verum.mp3"
-                    autoplay
-                    controls
-                  ></audio>
-                </div>
+              <v-card-actions class="ultimos-articulos__audio">
+                <audio
+                  src="../../assets/audio/ave_verum.mp3"
+                  autoplay
+                  controls
+                ></audio>
               </v-card-actions>
             </div>
 
-            <v-avatar class="ma-3" size="100" tile>
+            <v-avatar class="ma-3 ultimos-articulos__imagen" size="100" tile>
               <v-img
-                id="llaveTonalImagen"
                 class="my-auto"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Mozart-small.jpg/220px-Mozart-small.jpg"
               ></v-img>
@@ -139,11 +134,18 @@ export default {
 </script>
 <style lang="scss">
 @media (max-width: 700px) {
-  #llaveTonalImagen,
-  #img1,
-  #img2,
-  #img3 {
+  .ultimos-articulos__imagen {
     display: none;
+  }
+
+  .ultimos-articulos__llave-tonal {
+    max-width: 100%;
+  }
+
+  .ultimos-articulos__audio {
+    display: block;
+    max-width: 100%;
+    overflow-x: scroll;
   }
 }
 </style>
