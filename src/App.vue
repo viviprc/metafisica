@@ -203,6 +203,9 @@ a {
     text-decoration: none;
   }
 }
+.v-card__title {
+  word-break: normal;
+}
 // Cambia titulo a "Metafísica de Chile"
 @media (min-width: 959px) {
   #escuela {
