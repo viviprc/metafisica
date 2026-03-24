@@ -14,6 +14,12 @@
     <v-divider></v-divider>
     <v-row>
       <v-col cols="12" lg="5">
+        <!-- <div>
+          <v-card class="mx-auto mt-5" height="300px">
+            <h3 class="text-center my-3 pt-3">PRÓXIMO CURSO</h3>
+            <v-img src="../../public/afiche_marzo12.png"/>
+          </v-card>
+        </div> -->
         <CarruselClases />
       </v-col>
       <v-col cols="12" lg="7">
@@ -24,6 +30,7 @@
 </template>
 
 <script>
+
 import SerDeLuz from "../components/Inicio/SerDeLuz";
 import UltimosArticulos from "../components/Inicio/UltimosArticulos";
 import PanelDerecho from "../components/Inicio/PanelDerecho";

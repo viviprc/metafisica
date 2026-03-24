@@ -47,6 +47,7 @@
             
         <v-text-field
           v-model="phoneNumber"
+          :rules="phoneRules"
           :counter="9"
           :error-messages="errors"
           label="Teléfono de contacto"
@@ -59,11 +60,10 @@
               label="Escribe aquí..."
             ></v-textarea>
 
-            <v-btn
-              :disabled="!valid"
-              color="success"
-              class="mr-4"
-              @click="validate"
+             <v-btn
+                class="mr-4"
+                type="submit"
+                :disabled="invalid"
             >
               Enviar
             </v-btn>
@@ -71,6 +71,9 @@
             <v-btn color="error" class="mr-4" @click="reset">
               Limpiar formulario
             </v-btn>
+            <input id=url type=hidden 
+      value=www.metafisicadechile.cl name=url> <input id=para 
+      type=hidden value=grupometafisicodechile@gmail.com name=para> 
           </v-form>
         </div>
       </v-col>
@@ -95,13 +98,21 @@ export default {
       name: '',
       nameRules: [
         v => !!v || 'Se requiere nombre',
-        v => (v && v.length <= 30) || 'Nombre debe tener menos de 15 caracteres',
+        v => (v && v.length <= 30) || 'El nombre debe tener menos de 30 caracteres',
       ],
       email: '',
       emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+        v => !!v || 'El E-mail se requiere',
+        v => /.+@.+\..+/.test(v) || 'El E-mail debe ser válido',
       ],
+      
+        phoneNumber: '',
+        phoneRules:[
+          v => !!v || 'Se requiere un teléfono de contacto',
+          v => /^[0-9]$/ || 'Sólo debe ingresar números'
+        ]
+      
+  
     }),
      methods: {
       validate () {

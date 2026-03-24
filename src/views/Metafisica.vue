@@ -7,7 +7,7 @@
         <div class="d-flex justify-center">
           <v-img
             max-width="70%"
-            src="../assets/que_es_la_metafisica.jpg"
+            src="../../public/que_es_la_metafisica.jpg"
           ></v-img>
         </div>
         <p class="text-center font-weight-light">

@@ -3,7 +3,7 @@
     <v-card
       flat
       tile
-      class="indigo lighten-1 white--text text-center"
+      class="purple darken-4 white--text text-center"
       width="100%"
     >
       <v-card-text>
@@ -17,7 +17,7 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-        Estado 42 - of. 612 - Santiago Centro - Telefono: +569 9001 4194 -
+        Estado 42 - of. 406 - Santiago Centro - Telefono: +569 9001 4194 -
         grupometafisicodechile@gmail.com
       </v-card-text>
 
@@ -64,5 +64,5 @@ export default {
   text-decoration: none;
   color: white;
 }
-  
+
 </style>

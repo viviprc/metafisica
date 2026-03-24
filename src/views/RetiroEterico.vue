@@ -1,15 +1,15 @@
 <template>
-  <v-container>
+  <v-container class="all">
     <v-row class="d-flex align-start">
       <v-col lg="9" class="my-5 pr-5">
         <h1 class="indigo--text text--lighten-1 text-center">
           RETIRO ETÉRICO ABIERTO
         </h1>
-        <p class="text-center">15 de mayo al 15 de junio</p>
+        <p class="text-center">15 de marzo al 14 de abril</p>
         <div class="d-flex justify-center mb-5">
           <v-img
             max-width="30%"
-            src="../assets/madre_maria.png"
+            src="../../public/re_gabriel_maria.jpeg"
           ></v-img>
         </div>
         <p v-html="retiroAbierto" class="text-center"></p>
@@ -27,7 +27,7 @@ export default {
   },
   data() {
     return {
-      retiroAbierto:"MADRE MARÍA </br></br>RETIRO DEL SAGRADO CORAZÓN</br></br> Tierra Santa- Innsbruck- Lourdes- Fátima</br></br>Llaves Tonales Ave Maria de Schubert"
+      retiroAbierto:"Arcángel Gabriel y la Madre María<br><br>Templo de la Resurrección, Tierra Santa."
     }
   },
 };

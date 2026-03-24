@@ -8,15 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'Inicio',
-    component: Inicio
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: Inicio,
   },
   {
     path: '/metafisica',
@@ -35,7 +27,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "meditacionesDiarias" */ '../views/MeditacionesDiarias.vue'),
     props:{
       dia:{
-        type: String,
+        type: Number,
         require: true
       }
     }
@@ -96,10 +88,23 @@ const routes = [
 
 ]
 
+// const router = createRouter({
+//   history: createWebHashHistory(),
+//   routes,
+//   base: process.env.BASE_URL,
+//   scrollBehavior(to, from, savedPosition) {
+//     // always scroll to top
+//     return savedPosition || {top: 0};
+//   },
+// })
+
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior: (to, from, savedPosition) => {
+    return { x: 0, y: 0 }
+  }
 })
 
 export default router

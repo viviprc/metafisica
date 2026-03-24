@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row class="d-flex align-start">
-      <v-col lg="9" class="my-5 pr-5">
+      <v-col cols="12" lg="9" class="my-5 pr-5">
         <h1 class="indigo--text text--lighten-1 text-center">
           {{ dia.titulo }}
         </h1>
@@ -12,7 +12,7 @@
           </li>
         </ol>
       </v-col>
-      <v-col lg="3" class="pl-2"><PanelDerecho /></v-col>
+      <v-col cols="12" lg="3" class="pl-2"><PanelDerecho /></v-col>
     </v-row>
   </v-container>
 </template>
@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      Lunes: {
+      1: {
         titulo: "LUNES",
         subtitulo:
           "Segundo Rayo Dorado de la Sabiduría, la Iluminación, el Amor y la Paz.",
@@ -44,7 +44,7 @@ export default {
         'El Amado CASIOPEA, Elohim de la Sabiduría, dice: “El propósito del Segundo Rayo es la percepción activa y la contemplación iluminada del Plan y Diseño de Dios. Después que hayas tomado la decisión de cumplir la Voluntad de Dios, recibirás las Ideas Divinas y la instrucción acerca de cómo manifestarla. Por consiguiente, la primera actividad del cuerpo mental, después de tomar la decisión de actuar, es AQUIETARSE. Dentro de tu corazón está la Llama Dorada de la Iluminación que te revelará la Verdad”.',
         'Amado CASIOPEA: Te amo, te adoro y te doy las gracias por todo lo que significas para nuestra Tierra y toda la humanidad. Ayúdame a persistir en esta ciencia de la “Precipitación” y a manifestar cada día una idea recibida del Padre, para exteriorizarla concientemente. Gracias.'],
       },
-      Martes: {
+      2: {
         titulo: "MARTES",
         subtitulo: "Tercer Rayo Rosa del Amor Divino y la Adoración.",
         texto: ['Amada Presencia de Dios, “YO SOY” en mí: ¡Te amo, te adoro! ¡Oh Magna y Poderosa Llama dentro de mi corazón! Envío mi amor y adoración continua a Ti, al Gran Dios del Universo y a sus Mensajeros. Envío mi amor a la vida en todas partes. Bendigo toda vida que yo contacte este día en pensamientos, sentimientos, palabras o acciones. No critico, no condeno, ni juzgo en este día. No quiero que nada de mi vida salga de mí sin encarnar una bendición. “YO SOY” sellado en la Llama Rosa del Amor Divino. “YO SOY” una Presencia confortadora para toda vida en todas partes.',
@@ -57,7 +57,7 @@ export default {
         'El Gran Elohim ORIÓN, dice: “Te traigo la plenitud del Rayo y la Llama Rosa, como una alquimia espiritual disolvente para desterrar esos resentimientos y presiones de energía que están dentro de tu mundo emocional y profundamente sepultados dentro de tus memorias en tu cuerpo etérico. Esos recuerdos son causados por la infinidad de experiencias infelices que tuviste en el pasado, las cuales han formado heridas y cicatrices en tu cuerpo etérico. Estas cicatrices vuelven a abrirse ante la menor provocación, devolviendo hacia afuera nuevamente el veneno de enemistades, pleitos y malos entendidos del pasado. El hombre no sabe lo que lleva enterrado profundamente en ese reino que la ciencia llama subconsciente, donde yacen las memorias atrofiadas de cada una de las experiencias vividas en cada encarnación desde el primer día en que esa vida cayó de la ´Gracia` hasta el presente. El “Plan Divino” reúne a ciertas vidas, una y otra vez, presentándoles continuamente nuevas oportunidades para que enderecen las cosas entre ellas. En este mismo momento, si hay alguien en el mundo con quien tú no estás en completo acuerdo, trae la imagen de esa persona a tu mente y te daré la presión de mi sentimiento de perdón amoroso e incondicional hacia ese ser. Si lo aceptas, te verás libre del rechazo de energías que producen esos errores pasados”.',
         'En el Nombre de la Presencia de Dios que “YO SOY”, invoco a los Amados Pablo, Lady Rowena, Chamuel y Orión, y a todos los Grandes Seres y Poderes de la Luz que sirven en el Tercer Rayo y con la Llama Rosa del Amor Divino, para que ENCIENDAN (X3) la Llama del Amor y la Adoración como mil soles en cada parte de mi ser y mundo; en mis seres queridos y en cada persona, lugar y condición; en el Reino Elemental, las aves, los cuadrúpedos y toda cosa viviente en nuestra tierra, ahora mismo; y que la mantengan encendida allí hasta que toda vida aprisionada sea liberada por la Llama Rosa del Amor de Dios. ¡Les damos gracias!'],
       },
-      Miércoles: {
+      3: {
         titulo: "MIÉRCOLES",
         subtitulo:
           "Cuarto Rayo Blanco de la Pureza, las Resurrección y la Ascensión.",
@@ -75,7 +75,7 @@ export default {
         'En el Nombre de mi “Amada Presencia de Dios YO SOY” y la de toda la humanidad, te invoco, Amado Serapis Bey, y a todos los que integran Tu gloriosa Hermandad Blanca, para que mantengan encendida la Llama de la Ascensión, RESPLANDECIENDO (X3) a través de mis sentimientos, mi mente, mi cuerpo etérico, mi cuerpo físico, mi hogar, el hogar de mis seres queridos, mi negocio y todos mis asuntos. Que esa actividad estimuladora eleve todo mi mundo al Amor, Felicidad, Opulencia, Victoria y perfección de toda clase, eternamente sostenida. Llévenme a la victoria de mi Ascensión cuando mi servicio aquí en la Tierra esté cumplido. Mantengan la Llama de la Ascensión RESPLANDECIENDO (X3) a través de los asuntos mundiales, los negocios, las mentes, sentimientos y acciones de cada vida evolucionando en el planeta Tierra, para que lleguen más rápidamente a la Perfección. ¡Les doy las gracias!',
         ],
       },
-      Jueves: {
+      4: {
           titulo: "JUEVES",
         subtitulo:
           "Quinto Rayo Verde de la Verdad, la Curación, la Consagración y la Concentración.",
@@ -87,7 +87,7 @@ export default {
         'El Amado VISTA (CICLOPEA), Elohim de la Concentración, la Música y el “Ojo Todo Avizor” de Dios, dice: “¿Qué puedes efectuar, aún en las actividades mundanas de tu diario vivir, si no tienes concentración? Sin ella sólo hay mediocridad. Apenas se rasguña, como quien dice, la superficie. “Aquellos que resuelven elevarse por encima de las masas, toman una faceta de la vida y la desarrollan con maestría, decidiendo dentro de ellos mismos llegar a la excelencia, por lo menos en esa línea de expresión. Su desarrollo, lo mismo que su eficacia, va de acuerdo con la concentración de esas energías. “La Ley dice que lo que tú comienzas lo puedes cumplir cuando eso está de acuerdo con el Plan Divino de Perfección, bien sea la curación, precipitación, libertad económica, juventud eterna o la restauración de un órgano físico; no importa lo que sea, es posible, pero la constancia de mi Rayo es necesaria para lograrlo”.',
         'Amado Elohim VISTA: Te amo, te bendigo y te doy las gracias por Tu gran servicio a nuestra Tierra. Cárgame con Tu Poder de Concentración, para convertirme en Maestro aquí y ahora. Gracias.'],
       },
-      Viernes: {
+      5: {
           titulo: "VIERNES",
         subtitulo:
           "Sexto Rayo Oro-Rubí de la Paz, la Curación, la Gracia y la Ministración.",
@@ -103,7 +103,7 @@ export default {
         'El amado TRANQUILIDAD, Gran Elohim de la Paz, dice: “”YO SOY” el Elohim de la Provisión y la Paz. Ustedes, que han dado su interés y su vida a las actividades del Séptimo Rayo, representado por el Amado Maestro Saint Germain, están emergiendo lentamente del lodo de la creación y la limitación humana. Nosotros estamos tratando de fundar una gran base para este movimiento mundial, tratando de hacer de cada uno de ustedes un Pilar de Fuego Violeta. Pero les puedo decir aquí y ahora, que a menos que se conserven en paz, ininterrumpidamente, como individuos y como unidad colectiva, no importa cuán perfectamente construyan, al final no tendrán mas que cenizas si todavía sostienen en la conciencia la radiación desintegradora de los “siete pecados capitales” (lujuria, ira, malicia, odio, temor, gula, glotonería, pereza, envidia, orgullo y arrogancia) y sus demás ramificaciones. La paz no es una cualidad negativa. Es eminentemente positiva y una concentración de poder. ¿Cuánto control se necesita para mantenerse en paz? Consérvense absolutamente en calma y dueños de toda situación, a pesar de cualquier provocación en el seno de sus familias, entre sus compañeros de trabajo o en el mundo en general”.',
         'Amada Presencia de Dios “YO SOY” en mí y en toda la humanidad; Amados Jesús, Juan, Nada, Uriel, mi propio Ángel Guardián y Gran Elohim de la Paz: Los amo, los bendigo y les doy gracias en nombre de toda la humanidad por vuestro servicio a nuestra Tierra durante tanto tiempo. ENCIENDAN (X3) sus Llamas Cósmicas de Amor, Gracia, Provisión, Curación y Paz en mí, para que irradien a través de mi, bendiciendo y ayudando a armonizar a toda vida que yo contacte. Gran Elohim de la Paz: Envuelve todos mis esfuerzos constructivos en tu Gran Llama de Amor y Paz. Flamea tu Llama de Paz, como mil soles en mi cerebro y mis sentimientos, en los de toda cosa viviente en el Universo y en todos los que vendrán aquí en el futuro. Mantenla encendida hasta que la Paz en la Tierra y la Buena Voluntad sean una realidad para siempre sostenida y expandiéndose eternamente. ¡Te damos gracias!'],
       },
-      Sábado: {
+      6: {
           titulo: "SÁBADO",
         subtitulo:
           "Séptimo Rayo Violeta de la Misericordia, la Compasión, la Invocación, la Transmutación y la Liberación.",
@@ -115,7 +115,7 @@ export default {
         'Amado Maestro SAINT GERMAIN, Amado ZADQUIEL, Amado ARCTURUS, Amada Madre MERCEDES –actual Chohán del Séptimo Rayo- y todos los que desempeñan un servicio ene. Séptimo Rayo, los amo, los bendigo y les doy gracias por su gran servicio a mí y a toda la humanidad. En el Nombre de la Presencia de Dios “YO SOY”, y por el poder magnético del Fuego Sagrado investido en mí como Sacerdote (o Sacerdotisa) de la Orden de ZADQUIEL, hago esta Invocación: ÁNGELES DEL FUEGO VIOLETA (X3)¡VENGAN! (X3) Y mantengan el Amor del Fuego Liberador RESPLANDECIENDO (X3) a través de mi aura y mis sentimientos, mi cerebro y mi mundo mental, mi cuerpo etérico, cada célula de mi cuerpo físico, mi hogar, mis negocios, mis finanzas y asuntos, y háganlo por toda vida sobre el planeta Tierra hasta que toda creación humana, su causa y núcleo, sean disueltos y transmutados en Pureza y Perfección, y nuestra Tierra sea verdaderamente la SANTA ESTRELLA DE LALIBERTAD. Les agradezco por la respuesta a esta llamada de mi corazón, pues EL FUEGO VIOLETA DEL AMOR LIBERADOR NUNCA FALLA (X3) en producir Pureza y Perfección, y “YO SOY” ese FUEGO VIOLETA.',
         'Amado Maestro SAINT GERMAIN y Amada Diosa de la OPORTUNIDAD: Les comprometo mi Luz, mi vida y mi amor, procurando liberar los ímpetus de Perfección que haya en mi vida, para ayudar a traer Liberación a cada parte de vida sobre nuestro amado planeta Tierra tan pronto como sea posible. ¡Así sea!'],
       },
-      Domingo: {
+      7: {
           titulo: "DOMINGO",
         subtitulo:
           "Primer Rayo Azul Cristal de la Fuerza, el Poder y la Voluntad de Dios.",

@@ -52,14 +52,22 @@
             class="d-flex justify-space-around align-center navbar pa-0"
           >
             <v-container
-              
               class="d-flex justify-space-around align-center navbar pa-0"
             >
-              <p id="op1" class="my-auto white--text">Actualizada el 12/04/2021</p>
-              <router-link  id="op2" to="/metafisica">¿Qué es la Metafísica?</router-link>
+              <p id="op1" class="my-auto white--text">
+                Actualizada el 23/03/2026
+              </p>
+              <router-link id="op2" to="/metafisica"
+                >¿Qué es la Metafísica?</router-link
+              >
               <v-menu offset-y>
                 <template v-slot:activator="{ on, attrs }">
-                  <p id="op3" class="white--text my-auto" v-bind="attrs" v-on="on">
+                  <p
+                    id="op3"
+                    class="white--text my-auto"
+                    v-bind="attrs"
+                    v-on="on"
+                  >
                     Meditaciones diarias
                   </p>
                 </template>
@@ -67,24 +75,27 @@
                   <v-list-item
                     v-for="(meditacion, index) in meditaciones"
                     :key="index"
+                    :label="meditacion.label"
                   >
                     <v-list-item-title
                       ><router-link
                         :to="{
                           name: 'MeditacionDiaria',
-                          params: { id: meditacion.dia },
+                          params: { id: meditacion.id },
                         }"
-                        >{{ meditacion.dia }}</router-link
+                        >{{ meditacion.id }}</router-link
                       ></v-list-item-title
                     >
                   </v-list-item>
                 </v-list>
               </v-menu>
 
-              <router-link id="op4" to="/clases">Clases de Metafísica</router-link>
+              <!-- <router-link id="op4" to="/clases"
+                >Clases de Metafísica</router-link
+              >
               <router-link id="op5" to="/servicioCuracion"
                 >Servicio de Curación</router-link
-              >
+              > -->
             </v-container>
           </v-col>
         </v-row>
@@ -92,10 +103,12 @@
     </v-app-bar>
     <v-navigation-drawer
       v-model="verticalMenu"
+      location="right"
       height="100%"
-      absolute
+      app
       floating
       temporary
+
     >
       <v-subheader>METAFÍSICA DE CHILE</v-subheader>
 
@@ -107,12 +120,15 @@
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title
-                ><router-link :to="item.to">{{item.text}}</router-link
-              ></v-list-item-title>
+                ><router-link :to="item.to">{{
+                  item.text
+                }}</router-link></v-list-item-title
+              >
             </v-list-item-content>
           </v-list-item>
-        </v-list-item-group> </v-list
-    ></v-navigation-drawer>
+        </v-list-item-group>
+      </v-list></v-navigation-drawer
+    >
 
     <v-main>
       <router-view></router-view>
@@ -131,50 +147,65 @@ export default {
     Footer,
   },
 
-  data: () => ({
-    verticalMenu: null,
-    selectedItem: 1,
-    items: [
-      {
-        text: "Qué es la Metafísica",
-        icon: "mdi-head-question-outline",
-        to: "/metafisica",
-      },
-      {
-        text: `${new Date().getDay()}`,
-        icon: "mdi-calendar-today",
-        to: "/clases",
-      },
-      { text: "Clases de Metafísica", icon: "mdi-teach", to: `/clases` },
-      { text: "Servicio de Curación", icon: "mdi-hospital-box", to: "/servicioCuracion" },
-    ],
-    meditaciones: [
-      { dia: "Domingo" },
-      { dia: "Lunes" },
-      { dia: "Martes" },
-      { dia: "Miércoles" },
-      { dia: "Jueves" },
-      { dia: "Viernes" },
-      { dia: "Sábado" },
-    ],
-  }),
-  computed:{
+  data() {
+    return {
+      verticalMenu: null,
+      selectedItem: 1,
+      diaActual: '',
+      items: [
+         {
+          text: "Home",
+          icon: "mdi-home",
+          to: "/",
+        },
+        {
+          text: "Qué es la Metafísica",
+          icon: "mdi-head-question-outline",
+          to: "/metafisica",
+        },
+        {
+          text: `Meditación día ${this.diaDeLaSemana().dia}`,
+          icon: "mdi-calendar-today",
+          to: `/meditacion-diaria/${this.diaDeLaSemana().id}`,
+        },
+        // { text: "Clases de Metafísica", icon: "mdi-teach", to: `/clases` },
+        // {
+        //   text: "Servicio de Curación",
+        //   icon: "mdi-hospital-box",
+        //   to: "/servicioCuracion",
+        // },
+      ],
+      meditaciones: [
+        { dia: "Domingo", label: "Domingo", id: 7 },
+        { dia: "Lunes", label: "Lunes", id: 1 },
+        { dia: "Martes", label: "Martes", id: 2 },
+        { dia: "Miércoles", label: "Miércoles", id: 3 },
+        { dia: "Jueves", label: "Jueves", id: 4 },
+        { dia: "Viernes", label: "Viernes", id: 5 },
+        { dia: "Sábado", label: "Sábado", id: 6 },
+      ],
+    };
+  },
+  methods: {
+    clickable() {
+      console.log('hola');
+    },
     diaDeLaSemana() {
       const hoy = new Date();
       const dia = hoy.getDay();
       const dias = [
-        "domingo",
-        "lunes",
-        "martes",
-        "miercoles",
-        "jueves",
-        "viernes",
-        "sabado",
+        { dia: "Domingo", label: "Domingo", id: 7 },
+        { dia: "Lunes", label: "Lunes", id: 1 },
+        { dia: "Martes", label: "Martes", id: 2 },
+        { dia: "Miércoles", label: "Miércoles", id: 3 },
+        { dia: "Jueves", label: "Jueves", id: 4 },
+        { dia: "Viernes", label: "Viernes", id: 5 },
+        { dia: "Sábado", label: "Sábado", id: 6 },
       ];
-      const diaHoy = dias[dia];
-      return `${diaHoy}`;
+      const diaHoy = dias.find((d) => dia == d.id)
+      return diaHoy;
     },
-  }
+  },
 };
 </script>
 <style lang="scss">
@@ -186,16 +217,16 @@ a {
   font-family: "Istok Web", sans-serif;
   letter-spacing: 2px;
   padding-top: 10px;
-  color: #25415a;
+  color: #35007c;
 }
 .navbar_subtitle {
   font-family: "Istok Web", sans-serif;
   letter-spacing: 1px;
   font-size: 18px;
-  color: #4404cb;
+  color: #35007c;
 }
 .navbar {
-  background: linear-gradient(to right, #4404cb, #8787fb);
+  background: linear-gradient(to right, #35007c, #aa91cb);
   height: 35px;
   font-size: 14px;
   a {
@@ -222,14 +253,18 @@ a {
   .navbar_subtitle {
     display: none;
   }
-  li a{
+  li a {
     display: none;
   }
   #logo-escuela {
     width: 90px;
     text-align: left;
   }
-  #op1, #op2, #op3, #op4, #op5{
+  #op1,
+  #op2,
+  #op3,
+  #op4,
+  #op5 {
     display: none;
   }
 }

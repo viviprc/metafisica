@@ -1,4 +1,4 @@
-<template >
+<template>
   <v-container>
     <v-row dense>
       <v-col cols="12">
@@ -6,13 +6,35 @@
           <div class="d-flex flex-no-wrap justify-space-between">
             <div>
               <v-card-title class="headline">
-                Jesús expulsa a los cambistas</v-card-title
+                Toda cosa buena</v-card-title
               >
 
               <v-card-subtitle
-                >Cada año los judíos viajaban a Jerusalén para celebrar las
-                fiestas de las Pascuas, los que vivían a menos
-                de...</v-card-subtitle
+                >El propósito de Dios para cada uno de nosotros es la “ABUNDANCIA DE TODA COSA BUENA Y PERFECTA”. Dios...
+              </v-card-subtitle>
+              <v-card-actions>
+                <v-btn text color="indigo accent-4" @click="irArticulo2">
+                  Leer artículo
+                </v-btn>
+              </v-card-actions>
+            </div>
+
+            <v-avatar class="ma-3 ultimos-articulos__imagen" size="100" tile>
+              <v-img src="../../../public/toda_cosa_buena.jpg"></v-img>
+            </v-avatar>
+          </div>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12">
+        <v-card color="grey lighten-5">
+          <div class="d-flex flex-no-wrap justify-space-between">
+            <div>
+              <v-card-title class="headline">
+                San Patricio
+              </v-card-title>
+              <v-card-subtitle
+                >San Patricio es el santo patrono de Irlanda y Ser de Luz que contactó al Amado Victory, conocido como el...</v-card-subtitle
               >
               <v-card-actions>
                 <v-btn text color="indigo accent-4" @click="irArticulo1">
@@ -22,49 +44,23 @@
             </div>
 
             <v-avatar class="ma-3 ultimos-articulos__imagen" size="100" tile>
-              <v-img
-                src="http://www.metafisicadechile.cl/jesus_expulsa_a_los_cambistas.png"
-              ></v-img>
+              <v-img src="../../../public/san_patricio.png"></v-img>
             </v-avatar>
           </div>
         </v-card>
       </v-col>
-      <v-col cols="12">
-        <v-card color="grey lighten-5">
-          <div class="d-flex flex-no-wrap justify-space-between">
-            <div>
-              <v-card-title class="headline"> Es tiempo de Dios</v-card-title>
 
-              <v-card-subtitle
-                >Nosotros los seres humanos, desde nuestros orígenes, como
-                atestigua la historia, nos hemos preguntado por el
-                sentido...</v-card-subtitle
-              >
-              <v-card-actions>
-                <v-btn text color="indigo accent-4" @click="irArticulo2">
-                  Leer artículo
-                </v-btn>
-              </v-card-actions>
-            </div>
-
-            <v-avatar class="ma-3 ultimos-articulos__imagen" size="100" tile>
-              <v-img src="../../assets/es_tiempo_de_dios.png"></v-img>
-            </v-avatar>
-          </div>
-        </v-card>
-      </v-col>
       <v-col cols="12">
         <v-card color="grey lighten-5">
           <div class="d-flex flex-no-wrap justify-space-between">
             <div>
               <v-card-title class="headline">
-                Seis reglas de conducta</v-card-title
+                Dioses Merú</v-card-title
               >
 
               <v-card-subtitle
-                >Las seis reglas de conducta que particularmente se requieren
-                para ingresar al Sendero Espiritual, y que son
-                requisitos...</v-card-subtitle
+                >El 8 de marzo es el día del Rayo consagrado al Templo de la Iluminación del lago Titikaka de los Dioses Merú. Color de...
+                </v-card-subtitle
               >
               <v-card-actions>
                 <v-btn text color="indigo accent-4" @click="irArticulo3">
@@ -74,13 +70,12 @@
             </div>
 
             <v-avatar class="ma-3 ultimos-articulos__imagen" size="100" tile>
-              <v-img
-                src="../../../public/seis_reglas_de_conducta.jpg"
-              ></v-img>
+              <v-img src="../../../public/dioses_meru.jpeg"></v-img>
             </v-avatar>
           </div>
         </v-card>
       </v-col>
+
       <v-col cols="12">
         <v-card color="indigo lighten-5">
           <div class="d-flex flex-no-wrap justify-space-between">
@@ -90,26 +85,19 @@
               >
 
               <v-card-subtitle class="pb-1"
-                >Llave Tonal de la Amada Madre María</v-card-subtitle
+                >Llave tonal de la Señora Autumn.</v-card-subtitle
               >
               <v-card-text class="pb-0"
-                >“Ave Verum Corpus” – K 618, de Mozart.</v-card-text
+                >“Adagio molto” Otoño de las Cuatro Estaciones, Antonio Vivaldi.</v-card-text
               >
               <v-card-actions class="ultimos-articulos__audio">
                 <audio
-                  src="../../assets/audio/ave_verum.mp3"
+                  src="../../assets/audio/Antonio Vivaldi - Autumn (Adagio Molto).mp3"
                   autoplay
                   controls
                 ></audio>
               </v-card-actions>
             </div>
-
-            <v-avatar class="ma-3 ultimos-articulos__imagen" size="100" tile>
-              <v-img
-                class="my-auto"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Mozart-small.jpg/220px-Mozart-small.jpg"
-              ></v-img>
-            </v-avatar>
           </div>
         </v-card>
       </v-col>
@@ -119,15 +107,20 @@
 <script>
 export default {
   name: "UltimosArticulos",
+  data() {
+    return {
+      url: process.env.BASE_URL,
+    };
+  },
   methods: {
     irArticulo1() {
-      this.$router.push("articulos/jesus_expulsa_a_los_cambistas");
+      this.$router.push("articulos/san_patricio");
     },
     irArticulo2() {
-      this.$router.push("articulos/es_tiempo_de_dios");
+      this.$router.push("articulos/toda_cosa_buena");
     },
     irArticulo3() {
-      this.$router.push("articulos/seis_reglas_de_conducta");
+      this.$router.push("articulos/dioses_meru");
     },
   },
 };
