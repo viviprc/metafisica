@@ -22,17 +22,17 @@ export default {
     return {
       items: [
         {
-          src: `${process.env.BASE_URL}afiche_marzo24.png`,
+          src: `${process.env.BASE_URL}afiche_marzo31.png`,
         },
         {
-          src: `${process.env.BASE_URL}afiche_marzo25.png`,
+          src: `${process.env.BASE_URL}afiche_abril1.png`,
         },
         {
-          src: `${process.env.BASE_URL}afiche_marzo26.png`,
+          src: `${process.env.BASE_URL}afiche_abril2.png`,
         },
-        {
-          src: `${process.env.BASE_URL}afiche_marzo28.png`,
-        },
+        // {
+        //   src: `${process.env.BASE_URL}afiche_marzo28.png`,
+        // },
       ],
     };
   },

@@ -55,7 +55,7 @@
               class="d-flex justify-space-around align-center navbar pa-0"
             >
               <p id="op1" class="my-auto white--text">
-                Actualizada el 23/03/2026
+                Actualizada el 29/03/2026
               </p>
               <router-link id="op2" to="/metafisica"
                 >¿Qué es la Metafísica?</router-link
